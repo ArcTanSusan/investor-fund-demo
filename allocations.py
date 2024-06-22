@@ -39,9 +39,10 @@ def calculate_allocations(data, has_complex_data=False):
             diff = allocation_amount - sum([v["amount"] for k, v in allocations.items()])
             denominator -= diff
             allocations = helper_calculate_allocations(allocation_amount, allocations, investors, denominator)
-            
-    return format_results(allocations)
-   
+    
+    res = format_results(allocations)
+    print('res: ', res)
+    return res
 
 ## Unit tests
 p = Path(__file__).parents[1]
