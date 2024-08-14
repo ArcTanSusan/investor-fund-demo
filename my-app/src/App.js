@@ -19,6 +19,7 @@ function App() {
 
   const [results, setResults] = React.useState([]);
   const onClickProRate = async (values) => {
+    // hard-coded url for dev API server only! Remove in prod.
     const response = await fetch('http://127.0.0.1:8000/calculate?isComplexCalc=false', {
       method: 'POST',
       headers: {
